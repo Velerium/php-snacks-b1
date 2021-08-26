@@ -2,34 +2,46 @@
 
     $students = [
         'Student A' => [
-            'name' => 'Pippo';
-            'surname' => 'Baudo';
+            'name' => 'Pippo',
+            'surname' => 'Baudo',
             'grades' => [
-                'English' => 7;
-                'Math' => 5;
-                'History' => 8;
-            ];
+                'English' => 5,
+                'Math' => 5,
+                'History' => 8,
+            ]
         ],
 
         'Student B' => [
-            'name' => 'Gino';
-            'surname' => 'Mimmo';
+            'name' => 'Gino',
+            'surname' => 'Mimmo',
             'grades' => [
-                'English' => 4;
-                'Math' => 8;
-                'History' => 9;
-            ];
+                'English' => 7,
+                'Math' => 8,
+                'History' => 9,
+            ]
         ],
 
         'Student C' => [
-            'name' => 'Pino';
-            'surname' => 'Insegno';
+            'name' => 'Pino',
+            'surname' => 'Insegno',
             'grades' => [
-                'English' => 7;
-                'Math' => 7;
-                'History' => 7;
-            ];
+                'English' => 10,
+                'Math' => 10,
+                'History' => 7,
+            ]
         ],
     ];
+
+    for($i = 0; $i < count($students); $i++) {
+
+            echo $students[array_keys($students)[$i]]['name'];
+            echo " ";
+            echo $students[array_keys($students)[$i]]['surname'];
+            echo " ";
+
+            $avgVote = array_sum($students[array_keys($students)[$i]]['grades']) / count($students[array_keys($students)[$i]]['grades']);
+            echo $avgVote . '<br>';
+            
+    };
 
 ?>
